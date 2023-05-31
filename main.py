@@ -26,7 +26,7 @@ chat_response = ''
 # if the button is pressed, the code will be executed
 if st.button("**Click here to generate script and audio**"):
 # Check if product_name and product_description are provided
-
+        openai.api_key = os.getenv("OPENAI_API_KEY")
         response = openai.Completion.create(
             engine='text-davinci-003',  # Specify the GPT-3.5 model variant
             prompt=prompt, # set the user input from the txt area

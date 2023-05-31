@@ -106,8 +106,8 @@ response = requests.post(url, json=payload, headers=headers)
 
 response_data = response.json()
 transcription_id = response_data.get('transcriptionId')
-st.write(" transcriptionId: ")
-st.write(transcription_id)
+#st.write(" transcriptionId: ")
+#st.write(transcription_id)
 url = "https://play.ht/api/v1/articleStatus?transcriptionId={}".format(transcription_id)
 
 headers = {
